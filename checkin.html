@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html>
+    
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Check-in Form</title>
 </head>
 <body>
   <h1>Check-in Form</h1>
-  <form>
+  <form action="/api/checkin" method="post">
     <label for="name">Nome:</label>
     <input type="text" id="name" name="name"><br><br>
     <label for="email">E-mail:</label>
     <input type="email" id="email" name="email"><br><br>
     <label for="phone">Telefone:</label>
     <input type="tel" id="phone" name="phone"><br><br>
-    <input type="button" value="Enviar" onclick="storeData()">
+    <input type="submit" value="Enviar">
   </form>
+  
 
   <script>
     function storeData() {
@@ -30,3 +33,5 @@
   </script>
 </body>
 </html>
+
+<!-- localStorage.getItem('checkinData') -->
